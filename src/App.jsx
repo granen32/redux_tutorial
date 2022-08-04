@@ -2,8 +2,8 @@ import React from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import { darkTheme } from './styles/theme';
 import GlobalStyle from './styles/GlobalStyle';
-import Counter from './components/Counter';
 import Todos from './components/Todos';
+import CounterContainer from './containers/CounterContainer';
 
 const AppContainer = styled.main`
   display: flex;
@@ -18,7 +18,7 @@ function App() {
       <ThemeProvider theme={darkTheme}>
         <GlobalStyle />
         <AppContainer>
-          <Counter number={0} />
+          <CounterContainer />
           <Todos />
         </AppContainer>
       </ThemeProvider>

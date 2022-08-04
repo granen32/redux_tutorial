@@ -10,7 +10,7 @@ const initialState = {
   number: 0,
 };
 
-function counter(state = initialState, action) {
+const counter = (state = initialState, action) => {
   switch (action.type) {
     case INCREASE:
       return {
@@ -20,7 +20,9 @@ function counter(state = initialState, action) {
       return {
         number: state.number - 1,
       };
+    default:
+      return state;
   }
-}
+};
 
 export default counter;
