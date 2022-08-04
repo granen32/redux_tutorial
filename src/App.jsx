@@ -10,18 +10,18 @@ const AppContainer = styled.main`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-`
+`;
 
 function App() {
   return (
     <>
-    <ThemeProvider theme={darkTheme}>
-      <GlobalStyle/>
-      <AppContainer>
-      <Counter number={0}/>
-      <Todos />
-      </AppContainer>
-    </ThemeProvider>
+      <ThemeProvider theme={darkTheme}>
+        <GlobalStyle />
+        <AppContainer>
+          <Counter number={0} />
+          <Todos />
+        </AppContainer>
+      </ThemeProvider>
     </>
   );
 }
