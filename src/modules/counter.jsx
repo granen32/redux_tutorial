@@ -18,10 +18,12 @@ const counter = (state = initialState, action) => {
       };
     case DECREASE:
       return {
-        number: state.number - 1,
+        number: state.number > 0 ? state.number - 1 : state.number,
       };
     default:
-      return state;
+      return {
+        state,
+      };
   }
 };
 
