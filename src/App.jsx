@@ -2,8 +2,8 @@ import React from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import { darkTheme } from './styles/theme';
 import GlobalStyle from './styles/GlobalStyle';
-import Todos from './components/Todos';
 import CounterContainer from './containers/CounterContainer';
+import TodosContainer from './containers/TodosContainer';
 
 const AppContainer = styled.main`
   display: flex;
@@ -19,7 +19,8 @@ function App() {
         <GlobalStyle />
         <AppContainer>
           <CounterContainer />
-          <Todos />
+          <hr />
+          <TodosContainer />
         </AppContainer>
       </ThemeProvider>
     </>

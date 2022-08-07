@@ -21,9 +21,7 @@ const counter = (state = initialState, action) => {
         number: state.number > 0 ? state.number - 1 : state.number,
       };
     default:
-      return {
-        state,
-      };
+      return state;
   }
 };
 
