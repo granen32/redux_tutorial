@@ -1,9 +1,11 @@
+import { createAction } from 'redux-actions';
+
 const INCREASE = 'counter/INCREASE';
 const DECREASE = 'counter/DECREASE';
 // 액션함수 생성
 
-export const increase = () => ({ type: INCREASE });
-export const decrease = () => ({ type: DECREASE });
+export const increase = createAction(INCREASE);
+export const decrease = createAction(DECREASE);
 
 // 초기값 설정
 const initialState = {
