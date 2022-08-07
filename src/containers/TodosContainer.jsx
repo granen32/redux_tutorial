@@ -26,8 +26,8 @@ const TodosContainer = ({
 
 export default connect(
   ({ todos }) => ({
-    todos: todos.input,
-    input: todos.todos,
+    input: todos.input,
+    todos: todos.todos,
   }),
   {
     changeInput,

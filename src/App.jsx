@@ -19,7 +19,6 @@ function App() {
         <GlobalStyle />
         <AppContainer>
           <CounterContainer />
-          <hr />
           <TodosContainer />
         </AppContainer>
       </ThemeProvider>

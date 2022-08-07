@@ -1,5 +1,3 @@
-import React from 'react';
-
 const TodoItem = ({ todo, onToggle, onRemove }) => {
   return (
     <div>
@@ -30,21 +28,19 @@ const Todos = ({
     onInsert(input);
     onChangeInput('');
   };
+  const onChange = (e) => {
+    onChangeInput(e.target.value);
+  };
   return (
     <>
       <div>
         <form action="" onSubmit={onSubmit}>
-          <input type="text" value={input} onChange={onchange} />
+          <input type="text" value={input} onChange={onChange} />
           <button type="submit">등록</button>
         </form>
         <div>
           {todos.map((todo) => (
-            <TodoItem
-              todo={todo}
-              key={todo.id}
-              onToggle={onToggle}
-              onRemove={onRemove}
-            />
+            <TodoItem todo={todo} />
           ))}
         </div>
       </div>
